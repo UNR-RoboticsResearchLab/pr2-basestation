@@ -42,8 +42,8 @@ case "$1" in
     # Make sure "home/hwlog" exists
     [ -d /home/hwlog ] || mkdir /home/hwlog
 
-    # Create the distro symlink if it's not there
-    [ -e /etc/ros/distro -o -h /etc/ros/distro ] || ln -sf /etc/ros/indigo /etc/ros/distro
+    # Create the distro symlink 
+    ln -sf /etc/ros/indigo /etc/ros/distro
 
     ;;
   
