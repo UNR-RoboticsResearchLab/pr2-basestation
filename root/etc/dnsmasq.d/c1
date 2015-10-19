@@ -4,6 +4,7 @@
 # exeeds 1024 characters which the parser doesn't seem to like
 
 dhcp-range=net:c1,10.68.0.1,10.68.0.1,2m
+dhcp-mac=c1,00:15:17:*:*:6f
 dhcp-mac=c1,00:23:8b:*:*:01
 dhcp-mac=c1,00:23:8b:*:*:03
 dhcp-mac=c1,00:23:8b:*:*:05

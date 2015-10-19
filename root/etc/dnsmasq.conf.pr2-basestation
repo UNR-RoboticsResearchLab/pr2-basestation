@@ -200,7 +200,7 @@ expand-hosts
 # or /etc/ethers. Equivalent to ISC "deny unkown-clients".
 # This relies on the special "known" tag which is set when 
 # a host is matched.
-dhcp-host=00:23:8b:*:*:*,00:1e:68:*:*:*
+dhcp-host=00:23:8b:*:*:*,00:1e:68:*:*:*,00:15:17:*:*:*
 dhcp-ignore=#known
 
 # Send extra options which are tagged as "red" to any machine whose
