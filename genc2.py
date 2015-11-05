@@ -8,8 +8,8 @@ outstring += "# exeeds 1024 characters which the parser doesn't seem to like\n\n
 outstring += "# Uncomment the following line to enable netbooting of c2\n"
 outstring += "#dhcp-range=net:c2,10.68.0.2,10.68.0.2,2m\n"
 for i in range(0,255,2):
-    outstring += "dhcp-mac=c2,00:23:8b:*:*:%.2x\n"%i
+    outstring += "dhcp-mac=c2,*:*:*:*:*:%.2x\n"%i
 for i in range(0,255,2):
-    outstring += "dhcp-mac=c2,00:1e:68:*:*:%.2x\n"%i
+    outstring += "dhcp-mac=c2,*:*:*:*:*:%.2x\n"%i
 
 print outstring
