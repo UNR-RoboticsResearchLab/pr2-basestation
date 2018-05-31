@@ -1,9 +1,19 @@
+pr2-basestation (0.5.53-precise-ubuntu1) UNRELEASED; urgency=medium
+
+  * pr2-basestation: removed dependency on nvidia-current, changed apache so that it requires greater than 2.4.7-1ubuntu4 rather than equal to
+  * updated dependencies for xenial/kinetic codebases
+
+ -- David Feil-Seifer <dave@cse.unr.edu>  Thu, 31 May 2018 13:26:44 -0700
+
 pr2-basestation (0.5.53-precise) stable; urgency=low
 
+  [ Austin Hendrix ]
   * Incrementing to SVN: r1166
    - r1166: Make dnsmasq respect resolvconf again.
 
- -- Austin Hendrix <ahendrix@willowgarage.com>  Wed, 01 May 2013 11:27:15 -0700
+  [ David Feil-Seifer ]
+
+ -- David Feil-Seifer <dave@cse.unr.edu>  Thu, 31 May 2018 13:26:37 -0700
 
 pr2-basestation (0.5.52-precise) stable; urgency=low
 
