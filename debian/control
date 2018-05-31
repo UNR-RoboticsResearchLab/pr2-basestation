@@ -9,7 +9,7 @@ Standards-Version: 3.7.2
 Package: pr2-basestation
 Essential: yes
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, pr2-iptables.d, dnsmasq, atftpd, syslinux, fakeroot, python-svn, debhelper, config-package-dev, cdbs, python-pexpect, pr2-repo, ros-repo, chrony, pr2-sendhwlog, wg-openvpn, apache2 (>= 2.4.7-1ubuntu4), nvidia-settings, pr2-installer, pr2-repo-pr2, basestation-core-kinetic, ubuntu-desktop
+Depends: ${shlibs:Depends}, ${misc:Depends}, pr2-iptables.d, dnsmasq, atftpd, syslinux, fakeroot, python-svn, debhelper, config-package-dev, cdbs, python-pexpect, chrony, wg-openvpn, apache2 (>= 2.4.7-1ubuntu4), nvidia-settings, pr2-installer, pr2-repo-pr2, basestation-core-kinetic, ubuntu-desktop
 Description: Configures a computer to act as a basestation for the PR2
 Provides: ${diverted-files}, pr2-basestation
 Conflicts: ${diverted-files}, apparmor, network-manager
