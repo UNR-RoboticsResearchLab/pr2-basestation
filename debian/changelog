@@ -1,9 +1,9 @@
-pr2-basestation (0.5.53-xenial) UNRELEASED; urgency=medium
+pr2-basestation (0.5.53-xenial) xenial; urgency=medium
 
   * pr2-basestation: removed dependency on nvidia-current, changed apache so that it requires greater than 2.4.7-1ubuntu4 rather than equal to
   * updated dependencies for xenial/kinetic codebases
 
- -- David Feil-Seifer <dave@cse.unr.edu>  Thu, 31 May 2018 13:26:44 -0700
+ -- David Feil-Seifer <dfseifer@silentbob>  Sat, 15 Sep 2018 16:59:21 -0700
 
 pr2-basestation (0.5.53-precise) stable; urgency=low
 
