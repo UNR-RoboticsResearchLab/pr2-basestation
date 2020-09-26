@@ -2,12 +2,12 @@
 
 # NOTE: If you installed from an RPM,
 # don't edit this file in place in
-# /usr/share/wg-openvpn/easy-rsa --
+# /usr/share/openvpn/easy-rsa --
 # instead, you should copy the whole
 # easy-rsa directory to another location
-# (such as /etc/wg-openvpn) so that your
+# (such as /etc/openvpn) so that your
 # edits will not be wiped out by a future
-# wg-OpenVPN package upgrade.
+# OpenVPN package upgrade.
 
 # This variable should point to
 # the top level of the easy-rsa

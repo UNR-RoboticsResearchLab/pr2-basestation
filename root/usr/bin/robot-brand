@@ -137,21 +137,21 @@ Do you wish to continue?"""%(c1name, c2name, robotip, basestationip), False)):
     sys.exit(res)
 
 
-  if not os.path.exists("/etc/wg-openvpn/easy-rsa/keys/ca.crt"):
+  if not os.path.exists("/etc/openvpn/easy-rsa/keys/ca.crt"):
     if options.force or prompt('Generate server vpn keys?'):
-      res = subprocess.call(['/etc/wg-openvpn/gen_server_key'])
+      res = subprocess.call(['/etc/openvpn/gen_server_key'])
       if res != 0:
         print >> sys.stderr, "Could not generate vpn server keys!"
         sys.exit(res)
 
-  if os.path.exists("/etc/wg-openvpn/easy-rsa/keys/%s.crt"%robotname):
+  if os.path.exists("/etc/openvpn/easy-rsa/keys/%s.crt"%robotname):
     if not (options.force or prompt('Regenerate vpn-certificate for %s?  This will invalidate the existing keys.'%robotname)):
       sys.exit(0)
   else:
     if not (options.force or prompt('Generate vpn-certificate for %s?'%robotname)):
       sys.exit(0)
 
-  res = subprocess.call(['/etc/wg-openvpn/gen_robot_key', robotip, robotname])
+  res = subprocess.call(['/etc/openvpn/gen_robot_key', robotip, robotname])
   if res != 0:
     print >> sys.stderr, "Could not generate vpn certificate!"
     sys.exit(res)
@@ -202,13 +202,13 @@ Do you wish to continue?"""%(c1name, c2name, robotip, basestationip), False)):
   if not (options.force or prompt('Copy new VPN vertificate to robot?')):
     sys.exit(0)
 
-  res = subprocess.call(scpcmd + ['/etc/wg-openvpn/%s.tgz'%robotname, 'c1:/etc/wg-openvpn/'])
+  res = subprocess.call(scpcmd + ['/etc/openvpn/%s.tgz'%robotname, 'c1:/etc/openvpn/'])
   if res != 0:
     print >> sys.stderr, "Could not copy vpn certificate!"
     sys.exit(res)
 
   print 'Extracting vpnkeys on robot...'
-  res = subprocess.call(sshcmd + ['cd /etc/wg-openvpn && tar -xvzf /etc/wg-openvpn/%s.tgz'%robotname])
+  res = subprocess.call(sshcmd + ['cd /etc/openvpn && tar -xvzf /etc/openvpn/%s.tgz'%robotname])
   if res != 0:
     print >> sys.stderr, "Could not untar vpn certificate!"
     sys.exit(res)
@@ -239,7 +239,7 @@ Do you wish to continue?"""%(c1name, c2name, robotip, basestationip), False)):
     sys.exit(res)
 
   print 'Starting robot vpn...'
-  res = subprocess.call(sshcmd + ['/etc/init.d/wg-openvpn restart'])
+  res = subprocess.call(sshcmd + ['/etc/init.d/openvpn restart'])
   if res != 0:
     print >> sys.stderr, "Could not start VPN"
     sys.exit(res)
